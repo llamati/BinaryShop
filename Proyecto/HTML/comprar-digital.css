@@ -1,0 +1,84 @@
+.digital-card {
+    width: min(100%, 680px);
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 40px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.digital-card h2 {
+    margin-bottom: 18px;
+    color: var(--gold);
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+.digital-product {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    padding: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.digital-product-price {
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.demo-notice {
+    margin-bottom: 22px;
+    padding: 12px;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    background-color: rgba(216, 184, 90, 0.08);
+    color: var(--text-muted);
+}
+
+.digital-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.digital-form-group label {
+    font-weight: bold;
+}
+
+.digital-form-group input {
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.digital-form-group input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(216, 184, 90, 0.2);
+}
+
+.digital-message {
+    min-height: 1.5em;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.digital-message.error {
+    color: #e06c6c;
+}
+
+@media (max-width: 600px) {
+    .digital-product {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

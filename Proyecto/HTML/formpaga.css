@@ -1,0 +1,103 @@
+.checkout-card {
+    width: min(100%, 680px);
+    margin: 0 auto;
+    padding: clamp(20px, 5vw, 40px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+}
+
+.checkout-card h2 {
+    margin-bottom: 18px;
+    color: var(--gold);
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+.order-summary {
+    margin-bottom: 18px;
+}
+
+.order-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.checkout-notice {
+    margin-bottom: 22px;
+    padding: 12px;
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    background-color: rgba(216, 184, 90, 0.08);
+    color: var(--text-muted);
+}
+
+.checkout-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.checkout-field label {
+    font-weight: bold;
+}
+
+.checkout-field input,
+.checkout-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.checkout-field textarea {
+    resize: vertical;
+}
+
+.checkout-field input:focus,
+.checkout-field textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(216, 184, 90, 0.2);
+}
+
+.checkout-card-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.checkout-message {
+    min-height: 1.5em;
+    margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.checkout-message.error {
+    color: #e06c6c;
+}
+
+@media (max-width: 520px) {
+    .checkout-card-details {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

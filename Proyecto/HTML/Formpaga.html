@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completar compra | BinaryShop</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <link rel="stylesheet" href="formpaga.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1>BinaryShop</h1>
+      <a class="sell-link" href="Catalogo.html">Volver al catálogo</a>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="checkout-card" aria-labelledby="checkout-title">
+      <h2 id="checkout-title">Completa tu compra</h2>
+      <div id="order-summary" class="order-summary" aria-live="polite"></div>
+
+      <form id="checkout-form">
+        <div class="checkout-field">
+          <label for="customer-name">Nombre completo</label>
+          <input id="customer-name" name="nombre" type="text" autocomplete="name" maxlength="100" required>
+        </div>
+        <div class="checkout-field">
+          <label for="customer-email">Correo electrónico</label>
+          <input id="customer-email" name="correo" type="email" autocomplete="email" maxlength="150" required>
+        </div>
+        <div class="checkout-field">
+          <label for="customer-phone">Número de teléfono</label>
+          <input id="customer-phone" name="telefono" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" required>
+        </div>
+        <div class="checkout-field">
+          <label for="delivery-location">Ubicación de entrega</label>
+          <textarea id="delivery-location" name="ubicacion" autocomplete="street-address" rows="3" maxlength="300" required></textarea>
+        </div>
+        <div class="checkout-field">
+          <label for="card-number">Número de tarjeta </label>
+          <input id="card-number" name="tarjeta" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]{13,19}" minlength="13" maxlength="19" placeholder="Solo números, usa datos ficticios" required>
+        </div>
+        <div class="checkout-card-details">
+          <div class="checkout-field">
+            <label for="card-expiry">Fecha de vencimiento </label>
+            <input id="card-expiry" name="vencimiento" type="month" autocomplete="off" required>
+          </div>
+          <div class="checkout-field">
+            <label for="card-cvv">CVV </label>
+            <input id="card-cvv" name="cvv" type="password" inputmode="numeric" autocomplete="off" pattern="[0-9]{3,4}" minlength="3" maxlength="4" placeholder="3 o 4 dígitos ficticios" required>
+          </div>
+        </div>
+        <p id="checkout-message" class="checkout-message" role="status" aria-live="polite"></p>
+        <button id="confirm-order" class="checkout-btn" type="submit">Confirmar pedido</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="historial.js"></script>
+  <script src="formpaga.js"></script>
+</body>
+</html>

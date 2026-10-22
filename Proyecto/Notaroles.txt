@@ -1,0 +1,16 @@
+ comprador:
+        { usuario: 'comprador1', password: 'comp123' },
+        { usuario: 'comprador2', password: 'comp456' },
+        { usuario: 'comprador3', password: 'comp789' }
+      
+      vendedor: [
+        { usuario: 'vendedor1', password: 'vend123' },
+        { usuario: 'vendedor2', password: 'vend456' },
+        { usuario: 'vendedor3', password: 'vend789' }
+    
+      administrador: [
+        { usuario: 'admin1', password: 'admin123' },
+        { usuario: 'admin2', password: 'admin456' },
+        { usuario: 'admin3', password: 'admin789' }
+
+estos son los roles de js puedes usarlo para demostrar la opcion de banear cuanta o quitar catalogo

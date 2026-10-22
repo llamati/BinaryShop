@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso por roles</title>
+  <link rel="stylesheet" href="iniciarclases.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1>Iniciar sesión</h1>
+    <p class="subtitle">Selecciona tu rol para acceder</p>
+
+    <form id="loginForm">
+      <div class="role-options">
+        <div class="role-option">
+          <input type="radio" id="rol-comprador" name="rol" value="comprador" checked />
+          <label for="rol-comprador">Comprador</label>
+        </div>
+        <div class="role-option">
+          <input type="radio" id="rol-vendedor" name="rol" value="vendedor" />
+          <label for="rol-vendedor">Vendedor</label>
+        </div>
+        <div class="role-option">
+          <input type="radio" id="rol-admin" name="rol" value="administrador" />
+          <label for="rol-admin">Admin</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña" required />
+      </div>
+
+      <button type="submit" class="btn">Entrar</button>
+      <div id="mensajeError" class="error"></div>
+    </form>
+
+    <div class="info">
+      Usuarios de prueba:<br />
+      Comprador: comprador1 / comp123<br />
+      Vendedor: vendedor1 / vend123<br />
+      Administrador: admin1 / admin123
+    </div>
+
+    <a class="register-link" href="Registrarse.html">Crear usuario</a>
+  </div>
+
+  <script src="iniciarclases.js"></script>
+</body>
+</html>

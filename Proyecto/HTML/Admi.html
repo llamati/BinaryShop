@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar productos | BinaryShop</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>BinaryShop - Administrador</h1>
+            <a class="sell-link" href="Catalogo.html">Ver catálogo</a>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="admin-title">Administrar productos</h2>
+        <p id="admin-message" class="admin-message" role="status" aria-live="polite"></p>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar productos..." autocomplete="off">
+            <select id="category-select" aria-label="Filtrar por categoría">
+                <option value="todos">Todos los artículos</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="ropa">Ropa</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="otros">Otros</option>
+                <option value="digital">Productos digitales</option>
+            </select>
+        </div>
+        <section id="product-grid" class="product-grid" aria-label="Productos publicados"></section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

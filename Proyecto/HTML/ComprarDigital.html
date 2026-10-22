@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra digital | BinaryShop</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <link rel="stylesheet" href="comprar-digital.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1>BinaryShop</h1>
+      <a class="sell-link" href="Catalogo.html">Volver al catálogo</a>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="digital-card">
+      <h2>Compra de producto digital</h2>
+      <div id="digital-product" class="digital-product"></div>
+      <form id="digital-purchase-form">
+        <div class="digital-form-group">
+          <label for="buyer-email">Correo electrónico</label>
+          <input id="buyer-email" name="correo" type="email" autocomplete="email" required>
+        </div>
+        <div class="digital-form-group">
+          <label for="account-holder">Titular de la cuenta bancaria</label>
+          <input id="account-holder" name="titular" type="text" autocomplete="off" maxlength="80" required>
+        </div>
+        <div class="digital-form-group">
+          <label for="account-last-four">Numero de su Tarjeta Internacional</label>
+          <input id="account-last-four" name="ultimos-digitos" type="text" inputmode="numeric"  autocomplete="off" required>
+        </div>
+        <div class="digital-form-group">
+          <label for="account-last-four">CVV</label>
+          <input id="account-last-four" name="ultimos-digitos" type="text" inputmode="numeric" maxlength="4" autocomplete="off" required>
+        </div>
+          <div class="digital-form-group">
+          <label for="account-last-four">Fecha de vencimiento</label>
+          <input id="account-last-four" name="ultimos-digitos" type="text" inputmode="numeric" maxlength="4" autocomplete="off" required>
+        </div>
+        <p id="digital-message" class="digital-message" role="status" aria-live="polite"></p>
+        <button id="digital-submit" class="checkout-btn" type="submit">Continuar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="historial.js"></script>
+  <script src="comprar-digital.js"></script>
+</body>
+</html>

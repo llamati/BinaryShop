@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio de sesión y registro</title>
+    <link rel="stylesheet" href="Registrarse.css">
+</head>
+<body>
+
+	<h2>¿No tienes una cuenta? Crea una</h2>
+    <div id="contenedor-padre">
+	<form id="registro-form" action="#" method="post">
+		<p>
+			<label for="nombre-nuevo">Nombre:</label>
+			<input type="text" id="nombre-nuevo" name="nombre" required>
+		</p>
+		<p>
+			<label for="correo">Correo electrónico:</label>
+			<input type="email" id="correo" name="correo" required>
+		</p>
+		<p>
+			<label for="clave-nueva">Crea una clave:</label>
+			<input type="password" id="clave-nueva" name="clave" required>
+		</p>
+		<p>
+			<label for="confirmar-clave">Confirmar clave: </label>
+			<input type="password" id="confirmar-clave" name="confirmar-clave" required>
+		</p>
+
+		<div class="rol-group">
+			<label>Tipo de usuario:</label>
+			<div class="rol-options">
+				<label class="rol-option">
+					<input type="checkbox" name="rol" value="comprador">
+					<span>Comprador</span>
+				</label>
+				<label class="rol-option">
+					<input type="checkbox" name="rol" value="vendedor">
+					<span>Vendedor</span>
+				</label>
+			</div>
+		</div>
+
+		<button type="submit">Crear cuenta</button>
+	</form>
+    </div>
+    
+    <p>
+
+    </p>
+    <div id="tarjeta-inicio-sesion">
+<p textoinicio>¿Ya tienes una cuenta? Inicia sesión</p>
+    <button type="button" id="boton-iniciar-sesion" onclick="window.location.href='iniciarClases.html'">Iniciar sesión</button>
+    </div>
+
+	<script src="registrarse.js"></script>
+</body>
+</html>

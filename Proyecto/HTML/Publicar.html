@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicar producto | BinaryShop</title>
+  <link rel="stylesheet" href="catalogo.css">
+  <link rel="stylesheet" href="publicar.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1>BinaryShop</h1>
+      <a class="catalog-link" href="Catalogo.html">Volver al catálogo</a>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="publish-card" aria-labelledby="publish-title">
+      <h2 id="publish-title">Publica tu producto</h2>
+      <p class="publish-description">Completa los datos para poner tu producto a la venta.</p>
+
+      <form id="publish-form">
+        <div class="form-group">
+          <label for="product-name">Nombre del producto</label>
+          <input id="product-name" name="nombre" type="text" maxlength="80" required>
+        </div>
+
+        <div class="form-group">
+          <label for="product-price">Precio</label>
+          <div class="price-input">
+            <span aria-hidden="true">$</span>
+            <input id="product-price" name="precio" type="number" min="0.01" step="0.01" placeholder="0.00" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="product-category">Categoría</label>
+          <select id="product-category" name="categoria" required>
+            <option value="tecnologia">Tecnología</option>
+            <option value="ropa">Ropa</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <span class="field-label">Imagen del producto</span>
+          <label id="image-dropzone" class="image-dropzone" for="product-image">
+            <input id="product-image" name="imagen" type="file" accept="image/*">
+            <img id="image-preview" alt="Vista previa de la imagen seleccionada" hidden>
+            <span id="image-prompt">Arrastra una imagen aquí o haz clic para elegirla</span>
+          </label>
+          <p class="image-hint">Formatos de imagen. Tamaño máximo: 1 MB.</p>
+        </div>
+
+        <p id="publish-message" class="publish-message" role="status" aria-live="polite"></p>
+        <button class="checkout-btn publish-button" type="submit">Publicar producto</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="publicar.js"></script>
+</body>
+</html>
